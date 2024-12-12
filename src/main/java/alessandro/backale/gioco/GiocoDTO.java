@@ -10,6 +10,9 @@ public record GiocoDTO(
         @NotEmpty(message = "Inserisi la piattaforma")
         String piattaforma,
         @NotEmpty(message = "Inserisi la descrizione del gioco")
-        String descrizione
+        String descrizione,
+        @NotEmpty(message = "Inserisi la descrizione del gioco")
+        String urlImmagine
+
 ) {
 }

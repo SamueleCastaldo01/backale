@@ -41,7 +41,7 @@ public class GiocoService {
     //POST --------------------------------------------
     public Gioco save(GiocoDTO body) {
         try {
-            Gioco newGioco = new Gioco(body.nome(), body.genere(), body.piattaforma(), body.descrizione());
+            Gioco newGioco = new Gioco(body.nome(), body.genere(), body.piattaforma(), body.descrizione(), body.urlImmagine());
             return giocoRepository.save(newGioco);
 
         } catch (Exception e) {
@@ -58,6 +58,7 @@ public class GiocoService {
         found.setDescrizione(body.descrizione());
         found.setGenere(body.genere());
         found.setPiattaforma(body.piattaforma());
+        found.setUrlImmagine(body.urlImmagine());
         return this.giocoRepository.save(found);
     }
 

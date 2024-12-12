@@ -15,14 +15,16 @@ public class Gioco {
     private String genere;
     private String piattaforma;
     private String descrizione;
+    private String urlImmagine;
 
     public Gioco() {}
 
-    public Gioco(String nome, String genere, String piattaforma, String descrizione) {
+    public Gioco(String nome, String genere, String piattaforma, String descrizione, String urlImmagine) {
         this.nome = nome;
         this.genere = genere;
         this.piattaforma = piattaforma;
         this.descrizione = descrizione;
+        this.urlImmagine = urlImmagine;
     }
 
     public long getId() {
@@ -59,6 +61,14 @@ public class Gioco {
 
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
+    }
+
+    public String getUrlImmagine() {
+        return urlImmagine;
+    }
+
+    public void setUrlImmagine(String urlImmagine) {
+        this.urlImmagine = urlImmagine;
     }
 
     @Override
